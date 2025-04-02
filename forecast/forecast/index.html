@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>SYNRAXIS Real-Time Forecast Engine</title>
+  <title>SYNRAXIS Real-Time Forecast Engine (Live Data)</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body { background: #000; color: #0f0; font-family: monospace; padding: 2em; text-align: center; }
@@ -13,11 +13,9 @@
   </style>
 </head>
 <body>
-  <h1>🧠 SYNRAXIS Symbolic Stream Dashboard</h1>
+  <h1>🧠 SYNRAXIS Live Entropy Forecast (JSON Data)</h1>
 
   <div id="controls">
-    <label for="speed">⏱ Speed:</label>
-    <input type="range" id="speed" min="100" max="2000" step="100" value="800" />
     <label for="region">🌍 Region:</label>
     <select id="region">
       <option value="earth">Earth</option>
@@ -44,14 +42,8 @@
     });
 
     let i = 0;
-    let speed = 800;
     let region = "earth";
-
-    document.getElementById("speed").addEventListener("input", e => speed = parseInt(e.target.value));
-    document.getElementById("region").addEventListener("change", e => {
-      region = e.target.value;
-      resetCharts();
-    });
+    let data = {};
 
     function resetCharts() {
       i = 0;
@@ -61,30 +53,38 @@
       curvatureChart.data.datasets[0].data = [];
     }
 
-    function getSimulatedSymbolicData(region) {
-      // Placeholder: simulate based on region
-      const factor = region === "earth" ? 1 : region === "mars" ? 1.2 : 0.8;
-      return {
-        entropy: Math.sin(i / 4) * factor + 1.3,
-        curvature: Math.cos(i / 3) * 0.2 * factor
-      };
-    }
-
     function animate() {
-      const data = getSimulatedSymbolicData(region);
-      entropyChart.data.labels.push("t+" + i);
-      entropyChart.data.datasets[0].data.push(data.entropy);
+      if (!data[region]) return;
 
-      curvatureChart.data.labels.push("t+" + i);
-      curvatureChart.data.datasets[0].data.push(data.curvature);
+      const entropy = data[region].entropy;
+      const curvature = data[region].curvature;
 
-      entropyChart.update();
-      curvatureChart.update();
-      i++;
-      setTimeout(animate, speed);
+      if (i < entropy.length) {
+        entropyChart.data.labels.push("t+" + i);
+        entropyChart.data.datasets[0].data.push(entropy[i]);
+
+        curvatureChart.data.labels.push("t+" + i);
+        curvatureChart.data.datasets[0].data.push(curvature[i]);
+
+        entropyChart.update();
+        curvatureChart.update();
+        i++;
+        setTimeout(animate, 1000);
+      }
     }
 
-    animate();
+    document.getElementById("region").addEventListener("change", e => {
+      region = e.target.value;
+      resetCharts();
+      animate();
+    });
+
+    fetch("forecast_entropy_curvature_data.json")
+      .then((res) => res.json())
+      .then((jsonData) => {
+        data = jsonData;
+        animate();
+      });
   </script>
 </body>
 </html>
