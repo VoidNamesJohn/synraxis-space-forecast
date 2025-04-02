@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SYNRAXIS Live Entropy Forecast</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { background: #000; color: #0f0; font-family: monospace; padding: 2em; text-align: center; }
+    canvas { max-width: 100%; margin-top: 40px; }
+    h1 { color: #0ff; }
+  </style>
+</head>
+<body>
+  <h1>🔮 SYNRAXIS Entropy Flow Forecast</h1>
+  <canvas id="entropyChart"></canvas>
+  <canvas id="curvatureChart"></canvas>
+
+  <script>
+    const gradientData = [0.0, 0.3, 0.6, 1.1, 1.3, 1.57, 1.42, 1.28, 1.1, 0.8, 0.4, 0.1];
+    const curvatureData = [0.0, 0.2, 0.3, 0.4, 0.1, -0.15, -0.25, -0.3, -0.2, 0.0, 0.1, 0.15];
+
+    let i = 0;
+    const maxPoints = 12;
+    const entropyCtx = document.getElementById("entropyChart").getContext("2d");
+    const curvatureCtx = document.getElementById("curvatureChart").getContext("2d");
+
+    const entropyChart = new Chart(entropyCtx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [{
+          label: 'Entropy Gradient',
+          data: [],
+          borderColor: '#00ffe0',
+          fill: false
+        }]
+      }
+    });
+
+    const curvatureChart = new Chart(curvatureCtx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [{
+          label: 'Entropy Curvature',
+          data: [],
+          borderColor: '#ff4081',
+          fill: false
+        }]
+      }
+    });
+
+    function animateCharts() {
+      if (i < maxPoints) {
+        entropyChart.data.labels.push("t+" + i);
+        entropyChart.data.datasets[0].data.push(gradientData[i]);
+
+        curvatureChart.data.labels.push("t+" + i);
+        curvatureChart.data.datasets[0].data.push(curvatureData[i]);
+
+        entropyChart.update();
+        curvatureChart.update();
+        i++;
+        setTimeout(animateCharts, 800);
+      }
+    }
+
+    animateCharts();
+  </script>
+</body>
+</html>
