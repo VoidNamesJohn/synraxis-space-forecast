@@ -1,5 +1,5 @@
 import json
-from entropy.entropy_toolkit import compute_entropy_metrics
+from entropy.entropy_toolkit import calculate_entropy_metrics
 from entropy.hawking_decay import hawking_entropy_decay
 from entropy.symbolic_decay import evolve_symbolic_system
 
@@ -9,7 +9,7 @@ with open("entropy/symbolic_input.json", "r") as f:
 sequence = data.get("sequence", [])
 
 # Step 2: Compute entropy + motif metrics
-entropy, curvature, details = compute_entropy_metrics(sequence)
+entropy, curvature, details = calculate_entropy_metrics(sequence)
 
 # Step 3: Apply Hawking-style symbolic decay
 decayed = hawking_entropy_decay(sequence, rate=0.03)
