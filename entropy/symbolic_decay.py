@@ -1,37 +1,32 @@
 import numpy as np
-import matplotlib.pyplot as plt
-import json
 
-def hawking_symbolic_decay(sequence, decay_rate=0.005):
+def evolve_symbolic_system(sequence, iterations=10, transformation="shift"):
     """
-    Applies symbolic decay inspired by Hawking radiation to a sequence.
-    Gradually reduces each value with a decay curve, simulating entropy loss.
+    Evolves a symbolic motif sequence over time using a symbolic transformation rule.
+
+    Parameters:
+        sequence (list): Input motif sequence (e.g., entropy values, motif IDs).
+        iterations (int): Number of symbolic transformation steps.
+        transformation (str): Rule to apply ('shift', 'invert', 'scale').
+
+    Returns:
+        list: List of evolved sequences per iteration.
     """
-    if not isinstance(sequence, np.ndarray):
-        sequence = np.array(sequence, dtype=float)
+    evolved = [sequence.copy()]
 
-    decay_curve = np.exp(-decay_rate * np.arange(len(sequence)))
-    decayed_sequence = sequence * decay_curve
-    return decayed_sequence, decay_curve.tolist()
+    for _ in range(iterations):
+        last = evolved[-1]
 
-if __name__ == "__main__":
-    # Example test symbolic motif data
-    original = np.array([4, 5, 7, 10, 8, 6, 3, 2, 1, 0.5])
-    decayed, curve = hawking_symbolic_decay(original)
+        if transformation == "shift":
+            next_seq = [(v + 1) % 10 for v in last]
+        elif transformation == "invert":
+            max_val = max(last)
+            next_seq = [max_val - v for v in last]
+        elif transformation == "scale":
+            next_seq = [v * 1.1 for v in last]
+        else:
+            raise ValueError(f"Unknown transformation rule: {transformation}")
 
-    # Save decay to file for terrain engine
-    with open("decayed_output.json", "w") as f:
-        json.dump({
-            "original_sequence": original.tolist(),
-            "decay_curve": curve,
-            "decayed_sequence": decayed.tolist()
-        }, f, indent=2)
+        evolved.append(next_seq)
 
-    # Optional plot for inspection
-    plt.plot(original, label="Original")
-    plt.plot(decayed, label="Decayed (Hawking)")
-    plt.title("Symbolic Decay Inspired by Hawking Radiation")
-    plt.legend()
-    plt.grid(True)
-    plt.savefig("hawking_decay_plot.png")
-    plt.show()
+    return evolved
