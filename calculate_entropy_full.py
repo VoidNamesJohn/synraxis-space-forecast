@@ -1,29 +1,42 @@
 import json
 import numpy as np
-import EntropyHub as EH
+import matplotlib.pyplot as plt
+from EntropyHub import SampEn
 
-# Load symbolic data
-with open('symbolic_input.json') as f:
-    data = json.load(f)
+# Load symbolic input
+with open("symbolic_input.json", "r") as file:
+    data = json.load(file)
 
-sequence = data.get("symbolic_sequence", [])
-if len(sequence) < 12:
+# Extract signal
+signal = np.array(data.get("symbolic_sequence", []))
+
+# Check for minimum length
+if len(signal) < 12:
     raise ValueError("Input sequence too short for entropy calculation. Minimum length: 12")
 
-# Convert to numpy array
-signal = np.array(sequence)
+# Calculate Sample Entropy
+entropy, counts, matches = SampEn(signal, m=2, r=0.2)
 
-# Calculate entropy
-result = EH.SampEn(signal, m=2, r=0.2)
-
-# Save result
-entropy_data = {
-    "SampleEntropy": result[0].tolist(),
-    "Matches": result[1].tolist(),
-    "Templates": result[2].tolist()
+# Save entropy results
+results = {
+    "entropy_values": entropy.tolist() if hasattr(entropy, "tolist") else [entropy],
+    "summary": {
+        "min": float(min(entropy)) if hasattr(entropy, '__iter__') else float(entropy),
+        "max": float(max(entropy)) if hasattr(entropy, '__iter__') else float(entropy),
+        "mean": float(np.mean(entropy)) if hasattr(entropy, '__iter__') else float(entropy),
+        "std": float(np.std(entropy)) if hasattr(entropy, '__iter__') else 0.0
+    }
 }
 
-with open('entropy_results.json', 'w') as f:
-    json.dump(entropy_data, f, indent=2)
+with open("entropy_results.json", "w") as out_file:
+    json.dump(results, out_file, indent=2)
 
-print("Entropy results saved to entropy_results.json")
+# Plot entropy values
+plt.figure(figsize=(10, 5))
+plt.plot(results["entropy_values"], marker='o')
+plt.title("Symbolic Entropy Over Time")
+plt.xlabel("Index")
+plt.ylabel("Sample Entropy")
+plt.grid(True)
+plt.savefig("entropy_graphs.png")
+plt.close()
