@@ -1,12 +1,8 @@
 [build]
-publish = "."
+  publish = "."
+  command = ""
 
 [[redirects]]
-from = "/forecast/*"
-to = "/forecast/index.html"
-status = 200
-
-[[redirects]]
-from = "/docs/*"
-to = "/docs/index.html"
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200

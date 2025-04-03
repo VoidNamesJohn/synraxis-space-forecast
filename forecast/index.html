@@ -1,59 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>SYNRAXIS Live Forecast</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body { background: #000; color: #0f0; font-family: monospace; text-align: center; padding: 2em; }
-    canvas { max-width: 100%; margin-top: 20px; }
-    select { margin: 10px; }
-  </style>
-</head>
-<body>
-  <h1>🧠 SYNRAXIS Real-Time Forecast</h1>
-  <select id="region">
-    <option value="earth">Earth</option>
-  </select>
-  <canvas id="entropyChart"></canvas>
-  <canvas id="curvatureChart"></canvas>
-
-  <script>
-    const regionSelect = document.getElementById("region");
-    const entropyCtx = document.getElementById("entropyChart").getContext("2d");
-    const curvatureCtx = document.getElementById("curvatureChart").getContext("2d");
-
-    const entropyChart = new Chart(entropyCtx, {
-      type: 'line',
-      data: {
-        labels: [],
-        datasets: [{ label: 'Entropy', data: [], borderColor: '#0f0', fill: false }]
-      }
-    });
-
-    const curvatureChart = new Chart(curvatureCtx, {
-      type: 'line',
-      data: {
-        labels: [],
-        datasets: [{ label: 'Curvature', data: [], borderColor: '#f0f', fill: false }]
-      }
-    });
-
-    fetch("forecast_entropy_curvature_data.json")
-      .then(res => res.json())
-      .then(data => {
-        const region = regionSelect.value;
-        const entropy = data[region].entropy;
-        const curvature = data[region].curvature;
-
-        entropyChart.data.labels = entropy.map((_, i) => "t+" + i);
-        entropyChart.data.datasets[0].data = entropy;
-        entropyChart.update();
-
-        curvatureChart.data.labels = curvature.map((_, i) => "t+" + i);
-        curvatureChart.data.datasets[0].data = curvature;
-        curvatureChart.update();
-      });
-  </script>
+<html>
+<head><title>SYNRAXIS Forecast</title></head>
+<body style="background:#111;color:#0f0;font-family:sans-serif;text-align:center;padding:10%;">
+  <h1>🔮 Symbolic Entropy Forecast</h1>
+  <p>This module will soon display real-time entropy and symbolic curvature plots.</p>
+  <nav><a href="/">Home</a> | <a href="/docs/">Docs</a></nav>
 </body>
 </html>
