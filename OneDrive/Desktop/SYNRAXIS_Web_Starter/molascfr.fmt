@@ -1,0 +1,841 @@
+OBJECT               = CONTAINER
+ NAME                = COUNTS
+ START_BYTE          = 1
+ BYTES               = 4
+ REPETITIONS         = 20
+ ^STRUCTURE          = "MOLASCCT.FMT"
+ DESCRIPTION         = "This container has three sub-elements (range to
+  surface counts, 1st channel received pulse energy, and channel
+  number/pulse width). The three sub-elements repeat for each of 20
+  shots."
+END_OBJECT           = CONTAINER
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_2_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 81
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 2."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_1_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 82
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 1."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_4_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 83
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 4."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_3_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 84
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 3."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_6_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 85
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 6."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_5_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 86
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 5."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_8_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 87
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 8."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_7_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 88
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 7."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_10_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 89
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 10."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_9_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 90
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 9."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_12_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 91
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 12."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_11_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 92
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 11."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_14_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 93
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 14."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_13_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 94
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 13."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_16_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 95
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 16."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_15_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 96
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 15."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_18_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 97
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 18."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_17_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 98
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 17."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_20_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 99
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 20."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SHOT_19_LASER_TRANSMITTER_POWR
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 100
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "Transmitted laser pulse energy level. Energy
+  reading for LASER transmit power for shot 19."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = ENCODER_BITS_1
+ DATA_TYPE           = MSB_BIT_STRING
+ START_BYTE          = 101
+ BYTES               = 2
+ DESCRIPTION         = "This first container includes encoder start and
+  stop bit values from Shots 1-4"
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_2_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 1
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 2. Bits 1 and 2
+  are encoder start bits; bits 3 and 4 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_1_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 5
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 1. Bits 5 and 6
+  are encoder start bits; bits 7 and 8 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_4_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 9
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 4. Bits 9 and
+  10 are encoder start bits; bits 11 and 12 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_3_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 13
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 3. Bits 13 and
+  14 are encoder start bits; bits 15 and 16 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = ENCODER_BITS_2
+ DATA_TYPE           = MSB_BIT_STRING
+ START_BYTE          = 103
+ BYTES               = 2
+ DESCRIPTION         = "This second container includes encoder start and
+  stop bit values from Shots 5-8"
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_6_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 1
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 6. Bits 1 and 2
+  are encoder start bits; bits 3 and 4 are encoder stop bits"
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_5_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 5
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 5. Bits 5 and 6
+  are encoder start bits; bits 7 and 8 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_8_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 9
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 8. Bits 9 and
+  10 are encoder start bits; bits 11 and 12 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_7_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 13
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 7. Bits 13 and
+  14 are encoder start bits; bits 15 and 16 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = ENCODER_BITS_3
+ DATA_TYPE           = MSB_BIT_STRING
+ START_BYTE          = 105
+ BYTES               = 2
+ DESCRIPTION         = "This third container includes encoder start and
+  stop bit values from Shots 9-12"
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_10_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 1
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 10. Bits 1 and
+  2 are encoder start bits; bits 3 and 4 are encoder stop bits"
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_9_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 5
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 9. Bits 5 and 6
+  are encoder start bits; bits 7 and 8 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_12_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 9
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 12. Bits 9 and
+  10 are encoder start bits; bits 11 and 12 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_11_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 13
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 11. Bits 13 and
+  14 are encoder start bits; bits 15 and 16 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = ENCODER_BITS_4
+ DATA_TYPE           = MSB_BIT_STRING
+ START_BYTE          = 107
+ BYTES               = 2
+ DESCRIPTION         = "This fourth container includes start and stop bit
+  values from Shots 13 -16."
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_14_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 1
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 14. Bits 1 and
+  2 are encoder start bits; bits 3 and 4 are encoder stop bits"
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_13_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 5
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 13. Bits 5 and
+  6 are encoder start bits; bits 7 and 8 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_16_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 9
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 16. Bits 9 and
+  10 are encoder start bits; bits 11 and 12 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_15_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 13
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 15. Bits 13 and
+  14 are encoder start bits; bits 15 and 16 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = ENCODER_BITS_5
+ DATA_TYPE           = MSB_BIT_STRING
+ START_BYTE          = 109
+ BYTES               = 2
+ DESCRIPTION         = "This fifth container includes start and stop bit
+  values from Shots 17-20."
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_18_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 1
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 18. Bits 1 and
+  2 are encoder start bits; bits 3 and 4 are encoder stop bits"
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_17_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 5
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 17. Bits 5 and
+  6 are encoder start bits; bits 7 and 8 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_20_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 9
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 20. Bits 9 and
+  10 are encoder start bits; bits 11 and 12 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = SHOT_19_ENC
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 13
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The encoder stop and start bits of the first
+  channel to receive laser returned pulse energy for shot 19. Bits 13 and
+  14 are encoder start bits; bits 15 and 16 are encoder stop bits."
+END_OBJECT           = BIT_COLUMN
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = TIU_MASK_VALUES
+ DATA_TYPE           = MSB_BIT_STRING
+ START_BYTE          = 111
+ BYTES               = 1
+ DESCRIPTION         = "One byte to hold the TIU upper range bits and the
+  receiver channel mask status."
+   
+OBJECT               = BIT_COLUMN
+ NAME                = TIU_UPPER_RANGE_BITS
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 1
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 7
+ DESCRIPTION         = "The upper 3 or 3 highest ordered bits of the MOLA
+  time interval unit (TIU). Only the largest MSTIU value read in current
+  frame is saved. Only bits 6, 5, 4 are used."
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = RECEIVER_CHANNEL_MASK_STATUS
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 5
+ BITS                = 4
+ MINIMUM             = 0
+ MAXIMUM             = 15
+ DESCRIPTION         = "The altimeter channel mask settings from the
+  flight parameter table at the time of acquisition and storage of the
+  TIU upper range bits. The mask indicates if the channel filter is
+  active or is masked out to prevent triggering the TIU. Bit 3 = Channel
+  1; Bit 2 = Channel 2; Bit 1 = Channel 3; Bit 0 = Channel 4. 1 = channel
+  on, 0 = channel off"
+END_OBJECT           = BIT_COLUMN
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = ALGORITHM_STATUS_HIT_CNT
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 112
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 80
+ DESCRIPTION         = "Current value from the active data frame showing
+  the number of hits counted in the possible 20 shot hits in the single
+  frame or the number of hits summed over the possible 100 shots when in
+  the 5 frame mode. This is an indicator of the performance of the
+  tracking algorithm. If in the acquisition mode, this field will contain
+  the number of shot hits from a possible 80 shots within the 4 frame
+  acquisition window. HIT_CNT from previous frame."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_1_1ST_HALF_FRM_THRSHLD_SET
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 113
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The active channel threshold settings in the
+  current frame. The setting of the Channel 1 threshold sampled for the
+  first 10 shots in the frame"
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_2_1ST_HALF_FRM_THRSHLD_SET
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 114
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The active channel threshold settings in the
+  current frame. The setting of the Channel 2 threshold sampled for the
+  first 10 shots in the frame"
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_3_1ST_HALF_FRM_THRSHLD_SET
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 115
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The active channel threshold settings in the
+  current frame. The setting of the Channel 3 threshold sampled for the
+  first 10 shots in the frame"
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_4_1ST_HALF_FRM_THRSHLD_SET
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 116
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The active channel threshold settings in the
+  current frame. The setting of the Channel 4 threshold sampled for the
+  first 10 shots in the frame"
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_1_2ND_HALF_FRM_THRSHLD_SET
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 117
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The active channel threshold settings in the
+  current frame. The setting of the Channel 1 threshold sampled for the
+  last 10 shots in the frame"
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_2_2ND_HALF_FRM_THRSHLD_SET
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 118
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The active channel threshold settings in the
+  current frame. The setting of the Channel 2 threshold sampled for the
+  last 10 shots in the frame"
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_3_2ND_HALF_FRM_THRSHLD_SET
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 119
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The active channel threshold settings in the
+  current frame. The setting of the Channel 3 threshold sampled for the
+  last 10 shots in the frame"
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_4_2ND_HALF_FRM_THRSHLD_SET
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 120
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The active channel threshold settings in the
+  current frame. The setting of the Channel 4 threshold sampled for the
+  last 10 shots in the frame"
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = RANGE_DELAY
+ DATA_TYPE           = MSB_UNSIGNED_INTEGER
+ START_BYTE          = 121
+ BYTES               = 2
+ MINIMUM             = 0
+ MAXIMUM             = 65535
+ DESCRIPTION         = "Current frame range gate delay value (DELAY) as
+  set from the previous data frame. B[0] : Bits 3 - 0 are bits 11 - 8 and
+  B[1] : LSByte (bits 0-7) of the 12 bit Range Delay setting for this
+  frame."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = RANGE_WIDTH
+ DATA_TYPE           = MSB_UNSIGNED_INTEGER
+ START_BYTE          = 123
+ BYTES               = 2
+ MINIMUM             = 0
+ MAXIMUM             = 4096
+ DESCRIPTION         = "Current frame range gate window or width; set at
+  end of the previous data frame. B[0] : Bits 3 - 0 are bits 11 - 8 and
+  B[1] : LSByte of the 12 bit Range Gate Window setting for this frame."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = ALGORITHM_STATUS_MIN_HITS
+ DATA_TYPE           = MSB_INTEGER
+ START_BYTE          = 125
+ BYTES               = 1
+ MINIMUM             = -32768
+ MAXIMUM             = 32767
+ DESCRIPTION         = "The minimum shot hit count value required for a
+  matched filter channel to trigger; MIN_HITS value set in algorithm from
+  the previous data frame."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = SOFTWARE_STATUS
+ DATA_TYPE           = MSB_BIT_STRING
+ START_BYTE          = 126
+ BYTES               = 1
+ DESCRIPTION         = "Two of values reflecting the operation of the
+  flight software tracking algorithm. The frame counter value and the
+  first channel triggering at or above the minimum hit count are set from
+  the previous data frame tracking algorithm operation. Frame counter
+  (Frame_ctr) value from previous frame's tracking algorithm is in MS 4
+  bits; MIN_HITS trigger channel from previous frame is in LS 4 bits."
+   
+OBJECT               = BIT_COLUMN
+ NAME                = FRAME_COUNTER
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 1
+ BITS                = 4
+ DESCRIPTION         = "The frame counter value is set from the previous
+  data frame tracking algorithm operation. Frame counter (Frame_ctr)
+  value from previous frame's tracking algorithm is in MS 4 bits (7 - 4)
+  of Software status. Bits 7 - 4 are bits 3 - 0 of frame counter."
+END_OBJECT           = BIT_COLUMN
+   
+OBJECT               = BIT_COLUMN
+ NAME                = TRIGGER_CHANNEL
+ BIT_DATA_TYPE       = MSB_UNSIGNED_INTEGER
+ START_BIT           = 5
+ BITS                = 4
+ DESCRIPTION         = "The first channel triggering at or above the
+  minimum hit count is set from the previous data frame tracking
+  algorithm operation. MIN_HITS trigger channel from previous frame is in
+  LS 4 bits (0 - 3) of Software status. Bit 0 = Channel 1; Bit 1 =
+  Channel 2; Bit 2 = Channel 3; Bit 3 = Channel 4"
+END_OBJECT           = BIT_COLUMN
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_1_1ST_HALF_FRAME_BKGRND_CN
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 127
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The background energy or noise count levels for
+  channel 1 first half-frame. Pseudo log value of NOISE(1, 2, 3, 4) at
+  the end of a half-frame of current frame, 5.3 bit format. Plog base 2
+  of background count summed over 1st 10 shots of frame for channel 1."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_2_1ST_HALF_FRAME_BKGRND_CN
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 128
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The background energy or noise count levels for
+  channel 2 first half-frame. Pseudo log value of NOISE(1, 2, 3, 4) at
+  the end of a half-frame of current frame, 5.3 bit format. Plog base 2
+  of background count summed over 1st 10 shots of frame for channel 2."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_3_1ST_HALF_FRAME_BKGRND_CN
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 129
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The background energy or noise count levels for
+  channel 3 first half-frame. Pseudo log value of NOISE(1, 2, 3, 4) at
+  the end of a half-frame of current frame, 5.3 bit format. Plog base 2
+  of background count summed over 1st 10 shots of frame for channel 3."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_4_1ST_HALF_FRAME_BKGRND_CN
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 130
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The background energy or noise count levels for
+  channel 4 first half-frame. Pseudo log value of NOISE(1, 2, 3, 4) at
+  the end of a half-frame of current frame, 5.3 bit format. Plog base 2
+  of background count summed over 1st 10 shots of frame for channel 4."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_1_2ND_HALF_FRAME_BKGRND_CN
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 131
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The background energy or noise count levels for
+  channel 1 second half-frame. Pseudo log value of NOISE(1, 2, 3, 4) at
+  the end of a half-frame of current frame, 5.3 bit format. Plog base 2
+  of background count summed over last 10 shots of frame for channel 1."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_2_2ND_HALF_FRAME_BKGRND_CN
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 132
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The background energy or noise count levels for
+  channel 2 second half-frame. Pseudo log value of NOISE(1, 2, 3, 4) at
+  the end of a half-frame of current frame, 5.3 bit format. Plog base 2
+  of background count summed over last 10 shots of frame for channel 2."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_3_2ND_HALF_FRAME_BKGRND_CN
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 133
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The background energy or noise count levels for
+  channel 3 second half-frame. Pseudo log value of NOISE(1, 2, 3, 4) at
+  the end of a half-frame of current frame, 5.3 bit format. Plog base 2
+  of background count summed over last 10 shots of frame for channel 3."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CH_4_2ND_HALF_FRAME_BKGRND_CN
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 134
+ BYTES               = 1
+ MINIMUM             = 0
+ MAXIMUM             = 255
+ DESCRIPTION         = "The background energy or noise count levels for
+  channel 4 second half-frame. Pseudo log value of NOISE(1, 2, 3, 4) at
+  the end of a half-frame of current frame, 5.3 bit format. Plog base 2
+  of background count summed over last 10 shots of frame for channel 4."
+END_OBJECT           = COLUMN

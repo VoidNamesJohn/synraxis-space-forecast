@@ -1,0 +1,30 @@
+OBJECT               = COLUMN
+ NAME                = RANGE_TO_SURFACE_TIU_CNTS
+ DATA_TYPE           = MSB_UNSIGNED_INTEGER
+ START_BYTE          = 1
+ BYTES               = 2
+ DESCRIPTION         = "The laser shot surface ranging measurement in
+  Timing Interval Unit (TIU) counts. The least significant 16 bits of TIU
+  (LSTIU), stored for every shot. B[0] = Bits 15-8 of TIU reading; B[1] =
+  Bits 7-0 of TIU reading."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = FIRST_CH_RCVD_PULSE_ENRGY
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 3
+ BYTES               = 1
+ DESCRIPTION         = "The level of return, reflected energy as received
+  by the first channel and matched filter to trigger. Lowest numbered
+  non-zero energy reading for each shot."
+END_OBJECT           = COLUMN
+   
+OBJECT               = COLUMN
+ NAME                = CHANNEL_NUMBER_PULSE_WIDTH
+ DATA_TYPE           = UNSIGNED_INTEGER
+ START_BYTE          = 4
+ BYTES               = 1
+ DESCRIPTION         = "The number of the first channel to trigger and
+  the pulse width of the returned energy. Bits 8-7 : channel number - 1;
+  bits 6-1: pulse width"
+END_OBJECT           = COLUMN
