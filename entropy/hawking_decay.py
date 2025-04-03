@@ -1,9 +1,18 @@
 import numpy as np
 
-def apply_hawking_decay(sequence, decay_rate=0.05):
+def hawking_entropy_decay(sequence, decay_rate=0.05):
     """
-    Applies symbolic Hawking-style decay to a numeric sequence.
-    Models information bleed or symbolic entropy evaporation.
+    Applies symbolic Hawking-style entropy decay to a numeric sequence.
+
+    This simulates symbolic evaporation or entropy loss inspired by Hawking radiation,
+    where earlier values retain more 'mass' (information) than later ones.
+
+    Parameters:
+        sequence (list or np.array): The input numeric sequence (entropy, curvature, etc.).
+        decay_rate (float): The decay coefficient. Higher = faster symbolic dissipation.
+
+    Returns:
+        list: Decayed numeric sequence with entropy decay applied.
     """
     decayed = []
     info_mass = 1.0
@@ -13,7 +22,7 @@ def apply_hawking_decay(sequence, decay_rate=0.05):
         decayed_val = val * info_loss
         decayed.append(decayed_val)
 
-        # Optional: reduce mass after emission like black hole evaporation
+        # Emulate black hole evaporation: info mass slowly reduces over time
         info_mass *= (1 - decay_rate / 10)
 
     return decayed
