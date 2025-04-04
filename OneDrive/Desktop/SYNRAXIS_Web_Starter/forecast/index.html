@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SYNRAXIS Real-Time Forecast Engine (Live Data)</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { background: #000; color: #0f0; font-family: monospace; padding: 2em; text-align: center; }
+    canvas { max-width: 100%; margin-top: 20px; }
+    h1 { color: #0ff; }
+    #controls { margin: 20px; }
+    label { margin: 0 10px; }
+  </style>
+</head>
+<body>
+  <h1>🧠 SYNRAXIS Live Entropy Forecast (JSON Data)</h1>
+
+  <div id="controls">
+    <label for="region">🌍 Region:</label>
+    <select id="region">
+      <option value="earth">Earth</option>
+      <option value="mars">Mars</option>
+      <option value="jupiter">Jupiter</option>
+    </select>
+  </div>
+
+  <canvas id="entropyChart"></canvas>
+  <canvas id="curvatureChart"></canvas>
+
+  <script>
+    const entropyCtx = document.getElementById("entropyChart").getContext("2d");
+    const curvatureCtx = document.getElementById("curvatureChart").getContext("2d");
+
+    const entropyChart = new Chart(entropyCtx, {
+      type: 'line',
+      data: { labels: [], datasets: [{ label: 'Entropy Gradient', data: [], borderColor: '#00ffe0', fill: false }] }
+    });
+
+    const curvatureChart = new Chart(curvatureCtx, {
+      type: 'line',
+      data: { labels: [], datasets: [{ label: 'Entropy Curvature', data: [], borderColor: '#ff4081', fill: false }] }
+    });
+
+    let i = 0;
+    let region = "earth";
+    let data = {};
+
+    function resetCharts() {
+      i = 0;
+      entropyChart.data.labels = [];
+      entropyChart.data.datasets[0].data = [];
+      curvatureChart.data.labels = [];
+      curvatureChart.data.datasets[0].data = [];
+    }
+
+    function animate() {
+      if (!data[region]) return;
+
+      const entropy = data[region].entropy;
+      const curvature = data[region].curvature;
+
+      if (i < entropy.length) {
+        entropyChart.data.labels.push("t+" + i);
+        entropyChart.data.datasets[0].data.push(entropy[i]);
+
+        curvatureChart.data.labels.push("t+" + i);
+        curvatureChart.data.datasets[0].data.push(curvature[i]);
+
+        entropyChart.update();
+        curvatureChart.update();
+        i++;
+        setTimeout(animate, 1000);
+      }
+    }
+
+    document.getElementById("region").addEventListener("change", e => {
+      region = e.target.value;
+      resetCharts();
+      animate();
+    });
+
+    fetch("forecast_entropy_curvature_data.json")
+      .then((res) => res.json())
+      .then((jsonData) => {
+        data = jsonData;
+        animate();
+      });
+  </script>
+</body>
+</html>
