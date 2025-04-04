@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SYNRAXIS Interactive Canvas</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f172a;
+      color: #f1f5f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 2rem;
+    }
+    .nav {
+      margin: 20px;
+    }
+    .nav a {
+      color: #38bdf8;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1rem;
+    }
+    canvas {
+      border: 2px solid #38bdf8;
+      border-radius: 12px;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 SYNRAXIS Symbolic Forecasting Engine</h1>
+
+  <div class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="forecast/chaos_output.json">📊 Chaos Output</a>
+    <a href="forecast/synraxis_output.json">🌌 Standard Forecast</a>
+    <a href="canvas.html">🧠 Interactive Canvas</a>
+  </div>
+
+  <canvas id="synraxisCanvas" width="800" height="500"></canvas>
+
+  <div class="footer">
+    SYNRAXIS is a symbolic forecasting engine built on Collatz chaos, Hawking-style decay, and Einstein curvature. Outputs are for scientific exploration only.
+  </div>
+
+  <script>
+    const canvas = document.getElementById('synraxisCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function drawWave(data, color, offsetY = 0) {
+      ctx.beginPath();
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2;
+      data.forEach((v, i) => {
+        const x = (i / data.length) * canvas.width;
+        const y = canvas.height / 2 - v * 100 + offsetY;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+    }
+
+    fetch('forecast/chaos_output.json')
+      .then(res => res.json())
+      .then(data => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawWave(data.chaotic_input, '#22d3ee');
+        drawWave(data.decayed, '#f472b6', 30);
+        drawWave(data.einstein.gravity_waveform, '#34d399', -30);
+      })
+      .catch(e => {
+        ctx.font = '18px monospace';
+        ctx.fillText('Failed to load forecast data.', 50, 250);
+      });
+  </script>
+</body>
+</html>
