@@ -11,23 +11,42 @@
       background-color: #0f172a;
       color: #f1f5f9;
       display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+    }
+    .sidebar {
+      background-color: #1e293b;
+      padding: 20px;
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .sidebar h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+    .nav a {
+      color: #f1f5f9;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+    .nav a:hover {
+      color: #38bdf8;
+    }
+    .main {
+      flex: 1;
+      padding: 40px;
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
     }
     h1 {
-      margin-top: 20px;
       font-size: 2rem;
-    }
-    .nav {
-      margin: 20px;
-    }
-    .nav a {
-      color: #38bdf8;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 1.1rem;
+      margin-bottom: 20px;
     }
     canvas {
       border: 2px solid #38bdf8;
@@ -37,23 +56,33 @@
       margin-top: 40px;
       font-size: 0.9rem;
       color: #94a3b8;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>🧠 SYNRAXIS Symbolic Forecasting Engine</h1>
-
-  <div class="nav">
-    <a href="index.html">🏠 Home</a>
-    <a href="forecast/chaos_output.json">📊 Chaos Output</a>
-    <a href="forecast/synraxis_output.json">🌌 Standard Forecast</a>
-    <a href="canvas.html">🧠 Interactive Canvas</a>
+  <div class="sidebar">
+    <h2>SYNRAXIS</h2>
+    <div class="nav">
+      <a href="index.html">🏠 Home</a>
+      <a href="forecast/chaos_output.json">📊 Chaos Output</a>
+      <a href="forecast/synraxis_output.json">🌌 Standard Forecast</a>
+      <a href="canvas.html">🧠 Interactive Canvas</a>
+      <a href="docs/model1.html">🧬 Model 1: Collatz</a>
+      <a href="docs/model2.html">🌠 Model 2: Einstein Layers</a>
+      <a href="docs/model3.html">🕳️ Model 3: Hawking Decay</a>
+    </div>
+    <div class="footer">
+      © 2025 SYNRAXIS Research Project
+    </div>
   </div>
 
-  <canvas id="synraxisCanvas" width="800" height="500"></canvas>
-
-  <div class="footer">
-    SYNRAXIS is a symbolic forecasting engine built on Collatz chaos, Hawking-style decay, and Einstein curvature. Outputs are for scientific exploration only.
+  <div class="main">
+    <h1>🧠 SYNRAXIS Symbolic Forecasting Engine</h1>
+    <canvas id="synraxisCanvas" width="800" height="500"></canvas>
+    <div class="footer">
+      SYNRAXIS integrates Collatz chaos, Hawking-style decay, and Einstein curvature to explore symbolic forecasting across dimensions.
+    </div>
   </div>
 
   <script>
