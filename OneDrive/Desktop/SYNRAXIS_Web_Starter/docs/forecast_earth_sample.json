@@ -1,0 +1,9 @@
+{
+  "fingerprint": {
+    "entropy_density": 0.873,
+    "peak_gradient": 1.57,
+    "curve_profile": "concave-up"
+  },
+  "entropy_gradient": [0.0, 0.9, 0.9, 0.9, 0.72, 1.37, 1.37, 1.37, 1.5, 1.5, 1.5, 1.48, 1.48, 1.57, 1.57],
+  "entropy_curvature": [0.0, 0.4, 0.0, 0.0, -0.18, 0.65, 0.0, 0.0, 0.13, 0.0, 0.0, -0.02, 0.0, 0.09, 0.0]
+}
